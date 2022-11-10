@@ -23,7 +23,7 @@ logo = """
 """
 printcenter(Fore.RED + logo)
 
-#Username
+#Login
 
 
 usuario = "admin"
@@ -45,5 +45,3 @@ for i in range(2):
 
 print(Fore.BLUE + "Options to choose")
 
-
-# Corregir bucles
