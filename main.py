@@ -1,47 +1,50 @@
 #Libraries
 import getpass
+import os
+import time
 import sys, shutil, colorama
 from colorama import Fore
 colorama.init()
 
+
 def printcenter(s):
     print(s.center(shutil.get_terminal_size().columns))
 
-#Logo
+mainlogo = """
 
-logo = """
 
-  __  __         _____                 _   _                 
- |  \/  |       / ____|               | \ | |                
- | \  / | ___  | (___   ___ __ _ _ __ |  \| | ___  __ _ _ __ 
- | |\/| |/ __|  \___ \ / __/ _` | '_ \| . ` |/ _ \/ _` | '__|
- | |  | | (__   ____) | (_| (_| | | | | |\  |  __/ (_| | |   
- |_|  |_|\___| |_____/ \___\__,_|_| |_|_| \_|\___|\__,_|_|   
-                                                                                                                                                                            
-                                                             
+
+  _    _                      
+ | |  | |                     
+ | |__| | ___  _ __ ___   ___ 
+ |  __  |/ _ \| '_ ` _ \ / _ |
+ | |  | | (_) | | | | | |  __/
+ |_|  |_|\___/|_| |_| |_|\___|
+                              
+                              
+            
 
 """
-printcenter(Fore.RED + logo)
 
-#Login
+scansv = "1"
+exit = "2"
+
+print(Fore.RED + mainlogo)
+
+print(Fore.BLUE + "Options to choose: ")
+print(Fore.RED + "1) Test servers")
+print(Fore.RED + "2) Exit")
+print(Fore.RED + "...")
+option = input("Option: ")
+if option == scansv:
+    print("Wait a few seconds")
+    time.sleep(1)
+    os.system("cls")
+    os.system("python server.py")
+else:
+    pass
+if option == exit:
+    os.system("TASKKILL /F /IM cmd.exe")
 
 
-usuario = "admin"
-contra = "admin"
-
-for i in range(2):
-    user = input(Fore.WHITE + "Username: ")
-    if user == usuario:
-        for i in range(2):
-            password = getpass.getpass(Fore.WHITE + "Password: ")
-            if password == contra:
-                print(Fore.GREEN + "Just logged in")
-                sys.exit()
-            else:
-                print(Fore.RED + "Password error")
-                sys.exit()
-    else:
-        print(Fore.RED + "Username error")
-
-print(Fore.BLUE + "Options to choose")
 
