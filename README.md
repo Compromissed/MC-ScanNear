@@ -3,4 +3,4 @@
 - Made by TheBraisFP#4637
 
 
-<img src="https://discord.com/channels/@me/962016687102775297/1040961557703704596">
+<img src="https://imgur.com/a/NbgeP9z">
