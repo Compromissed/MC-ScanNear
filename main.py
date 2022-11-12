@@ -44,6 +44,8 @@ if option == scansv:
 else:
     pass
 if option == exit:
+    print("Thanks for using MC ScanNear")
+    time.sleep(1.5)
     os.system("TASKKILL /F /IM cmd.exe")
 
 
